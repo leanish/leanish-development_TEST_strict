@@ -1,0 +1,15 @@
+{
+  "floors": [
+    {
+      "ecosystem": "Maven",
+      "package": "org.apache.commons:commons-compress",
+      "version": "1.26.0",
+      "declaredIn": "build.gradle.kts",
+      "selector": [":compileClasspath", ":runtimeClasspath", ":testCompileClasspath", ":testRuntimeClasspath"],
+      "purpose": "security",
+      "advisories": ["CVE-2024-25710"],
+      "reason": "lowest fixed version",
+      "added": "2026-10-13"
+    }
+  ]
+}
