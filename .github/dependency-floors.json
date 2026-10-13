@@ -10,6 +10,17 @@
       "advisories": ["CVE-2024-25710"],
       "reason": "lowest fixed version",
       "added": "2026-10-13"
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-core",
+      "version": "2.18.11",
+      "declaredIn": "build.gradle.kts",
+      "selector": [":compileClasspath", ":runtimeClasspath", ":testCompileClasspath", ":testRuntimeClasspath"],
+      "purpose": "security",
+      "advisories": ["GHSA-72hv-8253-57qq", "GHSA-7hhh-6rmp-j9qf", "GHSA-r7wm-3cxj-wff9"],
+      "reason": "minimum fixed version for Jackson Core",
+      "added": "2026-10-13"
     }
   ]
 }
