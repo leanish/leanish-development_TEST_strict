@@ -33,9 +33,6 @@ dependencies {
 
     // Pinned through a strict dependency constraint.
     implementation("com.fasterxml.jackson.core:jackson-databind:2.15.2")
-    implementation("com.fasterxml.jackson.core:jackson-core:2.18.11") {
-        because("GHSA-72hv-8253-57qq, GHSA-7hhh-6rmp-j9qf, GHSA-r7wm-3cxj-wff9: minimum fixed version for Jackson Core")
-    }
     constraints {
         implementation("com.fasterxml.jackson.core:jackson-databind") {
             version {
@@ -53,6 +50,14 @@ dependencies {
 
     // Control: a plain vulnerable declaration, free to fix.
     implementation("org.apache.commons:commons-text:1.10.0")
+
+    implementation("com.fasterxml.jackson.core:jackson-core:2.18.11") {
+        because("GHSA-72hv-8253-57qq, GHSA-7hhh-6rmp-j9qf, GHSA-r7wm-3cxj-wff9: enforce the fixed Jackson Core version")
+    }
+
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.6.0") {
+        because("GHSA-2qp4-g3q3-f92w, GHSA-cqj8-47ch-rvvq: enforce the fixed Kotlin standard library version")
+    }
 
     // Strict parent of a vulnerable transitive.
     implementation("com.squareup.okhttp3:okhttp") {
