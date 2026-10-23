@@ -10,6 +10,28 @@
       "advisories": ["CVE-2024-25710"],
       "reason": "lowest fixed version",
       "added": "2026-10-13"
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "com.fasterxml.jackson.core:jackson-core",
+      "version": "2.18.11",
+      "declaredIn": "build.gradle.kts",
+      "selector": [":compileClasspath", ":runtimeClasspath", ":testCompileClasspath", ":testRuntimeClasspath"],
+      "purpose": "security",
+      "advisories": ["GHSA-72hv-8253-57qq", "GHSA-7hhh-6rmp-j9qf", "GHSA-r7wm-3cxj-wff9"],
+      "reason": "transitive under the pinned jackson-databind 2.15.2",
+      "added": "2026-10-23"
+    },
+    {
+      "ecosystem": "Maven",
+      "package": "org.jetbrains.kotlin:kotlin-stdlib",
+      "version": "1.6.0",
+      "declaredIn": "build.gradle.kts",
+      "selector": [":compileClasspath", ":runtimeClasspath", ":testCompileClasspath", ":testRuntimeClasspath"],
+      "purpose": "security",
+      "advisories": ["GHSA-2qp4-g3q3-f92w", "GHSA-cqj8-47ch-rvvq"],
+      "reason": "transitive under the pinned okhttp 4.9.3",
+      "added": "2026-10-23"
     }
   ]
 }
