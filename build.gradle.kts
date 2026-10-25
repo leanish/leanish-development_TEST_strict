@@ -65,6 +65,11 @@ dependencies {
         }
         because("CVE-2024-25710: lowest fixed version")
     }
+
+    // Security floor for the okio that okhttp's strict pin brings; recorded in .github/dependency-floors.json.
+    implementation("com.squareup.okio:okio:3.4.0") {
+        because("GHSA-w33c-445m-f8w7: lowest fixed version")
+    }
 }
 
 apply(from = "inactive-strict.gradle.kts")
