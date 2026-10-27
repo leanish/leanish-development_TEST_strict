@@ -65,6 +65,11 @@ dependencies {
         }
         because("CVE-2024-25710: lowest fixed version")
     }
+
+    // Security floor for okio: okhttp's strict 4.9.3 brings a vulnerable okio 2.8.0.
+    implementation("com.squareup.okio:okio:3.4.0") {
+        because("GHSA-w33c-445m-f8w7: okhttp's strictly 4.9.3 brings okio 2.8.0, fixed in 3.4.0")
+    }
 }
 
 apply(from = "inactive-strict.gradle.kts")
