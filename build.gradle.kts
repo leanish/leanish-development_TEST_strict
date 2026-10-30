@@ -65,6 +65,11 @@ dependencies {
         }
         because("CVE-2024-25710: lowest fixed version")
     }
+
+    // Security floor for okio, brought in by the okhttp pin; recorded in .github/dependency-floors.json.
+    implementation("com.squareup.okio:okio:3.4.0") {
+        because("GHSA-w33c-445m-f8w7: lowest fixed version; okhttp's strict 4.9.3 brings okio 2.8.0")
+    }
 }
 
 apply(from = "inactive-strict.gradle.kts")
