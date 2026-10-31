@@ -2,6 +2,17 @@
   "floors": [
     {
       "ecosystem": "Maven",
+      "package": "com.squareup.okio:okio",
+      "version": "3.4.0",
+      "declaredIn": "build.gradle.kts",
+      "selector": [":compileClasspath", ":runtimeClasspath", ":testCompileClasspath", ":testRuntimeClasspath"],
+      "purpose": "security",
+      "advisories": ["GHSA-w33c-445m-f8w7"],
+      "reason": "Fixes the vulnerable Okio transitive dependency pulled by okhttp.",
+      "added": "2026-10-31"
+    },
+    {
+      "ecosystem": "Maven",
       "package": "org.apache.commons:commons-compress",
       "version": "1.26.0",
       "declaredIn": "build.gradle.kts",
