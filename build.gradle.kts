@@ -51,6 +51,10 @@ dependencies {
     // Control: a plain vulnerable declaration, free to fix.
     implementation("org.apache.commons:commons-text:1.9")
 
+    implementation("com.squareup.okio:okio:3.4.0") {
+        because("GHSA-w33c-445m-f8w7: prevent denial of service when processing malformed gzip files")
+    }
+
     // Strict parent of a vulnerable transitive.
     implementation("com.squareup.okhttp3:okhttp") {
         version {
