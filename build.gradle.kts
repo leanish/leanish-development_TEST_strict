@@ -65,6 +65,10 @@ dependencies {
         }
         because("CVE-2024-25710: lowest fixed version")
     }
+
+    implementation("com.squareup.okio:okio:3.4.0") {
+        because("GHSA-w33c-445m-f8w7: fixed version for vulnerable transitive Okio")
+    }
 }
 
 apply(from = "inactive-strict.gradle.kts")
