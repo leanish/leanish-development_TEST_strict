@@ -58,6 +58,10 @@ dependencies {
         }
     }
 
+    implementation("com.squareup.okio:okio:3.4.0") {
+        because("GHSA-w33c-445m-f8w7: fix GZIP decoding of large extra fields")
+    }
+
     // Security floor declared with strictly(...), recorded in .github/dependency-floors.json.
     implementation("org.apache.commons:commons-compress") {
         version {
